@@ -4,6 +4,7 @@
   "description": "Boilerplate for using A-Frame (VR) with React.",
   "dependencies": {
     "aframe-core": "0.1.3",
+    "aframe-layout": "^1.0.2",
     "aframe-react": "^1.1.0",
     "babel-polyfill": "^6.3.14",
     "react": "^0.14.3",
