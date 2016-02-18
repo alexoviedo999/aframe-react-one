@@ -1,4 +1,4 @@
-import 'aframe-core';
+import AFRAME from 'aframe-core';
 import 'babel-polyfill';
 import {
     Animation, Entity, Scene
@@ -11,6 +11,14 @@ import Camera from './components/Camera';
 import Cursor from './components/Cursor';
 import Light from './components/Light';
 import Sky from './components/Sky';
+import layout from 'aframe-layout';
+
+AFRAME.registerComponent('layout', layout);
+
+console.log('layout', layout);
+console.log('aframe', AFRAME);
+
+console.log('layout', layout);
 
 class BoilerplateScene extends React.Component {
     constructor(props) {
@@ -35,7 +43,7 @@ class BoilerplateScene extends React.Component {
               </a-assets>
 
             <Scene>
-            <Entity rotation="0 -85 0">
+            <Entity rotation="0 -90 0">
                 <Camera >
                     <Cursor/>
                 </Camera>
@@ -56,7 +64,7 @@ class BoilerplateScene extends React.Component {
                 <Entity>
                     <Animation
                         attribute = "rotation"
-                        dur = "4000"
+                        dur = "6000"
                         easing= "linear"
                         repeat = "indefinite"
                         to = "360 0 0" />
@@ -70,79 +78,188 @@ class BoilerplateScene extends React.Component {
                         onClick = {
                             this.changeColor
                         }
-                        position = "60 10 0">
+                        position = "120 5 10">
+
+                        <Animation
+                            attribute = "rotation"
+                            dur = "5000"
+                            repeat = "indefinite"
+                            to = "0 0 360" />
 
                         </Entity>
 
-                    <Entity
-                        geometry = "primitive: box"
-                        material = {
-                            {
-                                color: this.state.color
+                        <Entity
+                            geometry = "primitive: box"
+                            material = {
+                                {
+                                    color: this.state.color
+                                }
                             }
-                        }
-                        onClick = {
-                            this.changeColor
-                        }
-                        position = "50 10 5">
-
-                    </Entity>
-
-                    <Entity
-                        geometry = "primitive: box"
-                        material = {
-                            {
-                                color: this.state.color
+                            onClick = {
+                                this.changeColor
                             }
-                        }
-                        onClick = {
-                            this.changeColor
-                        }
-                        position = "40 10 10">
+                            position = "120 -5 -10">
 
-                        <Animation
-                            attribute = "rotation"
-                            dur = "5000"
-                            repeat = "indefinite"
-                            to = "0 0 360" />
-                    </Entity>
-                    <Entity
-                        geometry = "primitive: box"
-                        material = {
-                            {
-                                color: this.state.color
-                            }
-                        }
-                        onClick = {
-                            this.changeColor
-                        }
-                        position = "30 10 15">
+                            <Animation
+                                attribute = "rotation"
+                                dur = "5000"
+                                repeat = "indefinite"
+                                to = "0 0 360" />
 
-                        <Animation
-                            attribute = "rotation"
-                            dur = "5000"
-                            repeat = "indefinite"
-                            to = "0 0 360" />
-                    </Entity>
-                <Entity
-                    geometry = "primitive: box"
-                    material = {
-                        {
-                            color: this.state.color
-                        }
-                    }
-                    onClick = {
-                        this.changeColor
-                    }
-                    position = "20 10 20">
+                            </Entity>
 
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "80 5 10">
 
-                    <Animation
-                        attribute = "rotation"
-                        dur = "5000"
-                        repeat = "indefinite"
-                        to = "0 0 360" />
-                </Entity>
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+
+                            </Entity>
+
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "80 -5 -10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+
+                            </Entity>
+
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "40 5 10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+                            </Entity>
+
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "40 -5 -10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+                            </Entity>
+
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "20 5 10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+                            </Entity>
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "20 -5 -10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+                            </Entity>
+
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "10 5 10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+                            </Entity>
+
+                            <Entity
+                                geometry = "primitive: box"
+                                material = {
+                                    {
+                                        color: this.state.color
+                                    }
+                                }
+                                onClick = {
+                                    this.changeColor
+                                }
+                                position = "10 -5 -10">
+
+                                <Animation
+                                    attribute = "rotation"
+                                    dur = "5000"
+                                    repeat = "indefinite"
+                                    to = "0 0 360" />
+                            </Entity>
 
 
 
